@@ -66,6 +66,9 @@ const GalleryModal = (props: GalleryModalProps) => {
             </a>
           )}
           <img src={imageUrl} />
+          <div className={styles.textOverlay}>
+            {text}
+          </div>
         </div>
       </div>
     </div>

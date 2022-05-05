@@ -10,6 +10,10 @@
   height: 100%;
 }
 
+.textOverlay {
+    background-color: #fff;
+    padding: 1em;
+}
 .galleryContainer {
   padding: 0.9375rem 0;
 }
@@ -27,6 +31,7 @@
 .galleryGrid {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 8px;
   max-width: 1200px;
   width: 100%;
