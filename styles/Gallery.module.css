@@ -1,6 +1,6 @@
 
 .container {
-  font-family: helvetica;
+  font-family: "Quicksand Regular";
   position: relative;
   font-size: 100%;
   background: #d1913c;
@@ -13,6 +13,7 @@
 .textOverlay {
     background-color: #fff;
     padding: 1em;
+    color: rgba(0, 0, 0, 0.623);
 }
 .galleryContainer {
   padding: 0.9375rem 0;

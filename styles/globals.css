@@ -1,9 +1,13 @@
+@font-face {
+  font-family: "Quicksand Regular";
+  src: url("/fonts/Quicksand/static/Quicksand-Regular.ttf");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Quicksand Regular", Helvetica Neue, sans-serif;
 }
 
 
