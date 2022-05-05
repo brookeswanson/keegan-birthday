@@ -3,7 +3,7 @@ import { useState } from "react";
 
 interface ImageI {
   imageUrl: string;
-  text: string;
+  text?: string | undefined;
   vertical?: boolean | undefined;
 }
 
@@ -26,7 +26,7 @@ interface GalleryModalProps {
 const GalleryModal = (props: GalleryModalProps) => {
   const { openModal, closeModal, hasNext, hasPrev, findNext, findPrev, image } =
     props;
-  const { imageUrl, text } = image;
+  const { imageUrl, text, vertical } = image;
   const handleKeyDown = (e: any) => {
     if (e.keyCode === 27) closeModal(e);
     if (e.keyCode === 37 && hasPrev) findPrev(e);
@@ -35,7 +35,7 @@ const GalleryModal = (props: GalleryModalProps) => {
   return (
     <div hidden={!openModal}>
       <div className={styles.modalOverlay} onClick={closeModal}></div>
-      <div className={styles.modal}>
+      <div className={vertical ? styles.modalV : styles.modal }>
         <div className={styles.modalBody}>
           <a
             href="#"
@@ -66,9 +66,7 @@ const GalleryModal = (props: GalleryModalProps) => {
             </a>
           )}
           <img src={imageUrl} />
-          <div className={styles.textOverlay}>
-            {text}
-          </div>
+          {text && <div className={styles.textOverlay}>{text}</div>}
         </div>
       </div>
     </div>

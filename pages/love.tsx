@@ -3,9 +3,15 @@ import { useState } from "react";
 import Gallery from "../components/Gallery";
 
 const images = [
-  { imageUrl: "/kiran-and-hammocks.png", text: "Meow" },
-  { imageUrl: "/kiran-and-sunshine.png", text: "Hello" },
-  { imageUrl: "/no-crying-in-baseball.png", text: "Grape" },
+  {
+    imageUrl: "/kiran-and-hammocks.png",
+    text: "hi keegan, happy 1027th birthday! i appreciate our budding growing friendship. i’ve learnt so much from you already, and i love our trans masc / trans fem dynamic!! love you lots",
+  },
+  {
+    imageUrl: "/kiran-and-sunshine.png",
+    text: "hi keegan, happy 1027th birthday! i appreciate our budding growing friendship. i’ve learnt so much from you already, and i love our trans masc / trans fem dynamic!! love you lots",
+  },
+  { imageUrl: "/no-crying-in-baseball.png"},
   {
     imageUrl: "/couple-goals.png",
     text: `
@@ -21,11 +27,11 @@ const images = [
         a host of precious memories with Monday (on Mondays, for extra points),
         and resounding peace groundedness,
         and joy.
-        Happy, happy birthday to you!`
+        Happy, happy birthday to you!`,
   },
-  { imageUrl: "/housemates.png", text: "Park Benches and fun" },
-  { imageUrl: "/fam.png", text: "Love." },
-  { imageUrl: "/MIB.png", text: "Aliens wooo", vertical: true },
+  { imageUrl: "/housemates.png"},
+  { imageUrl: "/fam.png", text: "From Mom" },
+  { imageUrl: "/MIB.png", vertical: true },
 ];
 const Love: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
