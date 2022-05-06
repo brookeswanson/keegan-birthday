@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 const PI2 = Math.PI * 2;
 
@@ -198,7 +199,9 @@ const Home: NextPage = () => {
   const ref: any = useRef();
 
   useEffect(() => {
-    if (!ref) {return;}
+    if (!ref) {
+      return;
+    }
     let then = new Date().getTime();
     const birthday = new Birthday(ref.current);
     window.onresize = () => birthday.resize();
@@ -210,8 +213,8 @@ const Home: NextPage = () => {
       let delta = now - then;
 
       then = now;
-      birthday.update(delta/1000);
-    }
+      birthday.update(delta / 1000);
+    };
     requestAnimationFrame(loop);
   }, []);
   return (
@@ -221,7 +224,11 @@ const Home: NextPage = () => {
         <meta name="description" content="It's Keegan's Birthday!!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Happy Birthday!</h1>
+      <Link href="/love">
+        <a>
+          <h1>Happy Birthday!</h1>
+        </a>
+      </Link>
       <canvas ref={ref} className={styles.birthday}></canvas>
     </div>
   );
