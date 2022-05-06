@@ -1,6 +1,7 @@
 import { NextPage } from "next/types";
-import { useState } from "react";
+import React, { useState } from "react";
 import Gallery from "../components/Gallery";
+import Head from "next/head";
 
 const images = [
   {
@@ -78,22 +79,30 @@ I’m so happy I get to call you friend and wish you all the best in your year t
 I know Phyllis also sends her best wishes and snuggles too! Happy bday🥳🎂🎁🎈🎉 - sara`,
   },
   {
-      imageUrl: "/farm-adventures.jpg",
-      text:`
+    imageUrl: "/farm-adventures.jpg",
+    text: `
    Happy Birthday Keegan!!
    Love you so much. Mama Mia Thanksgiving 4 eva. Thank you for being such a wonderful kind human.
    Very grateful that you exist and I can't wait for all the adventures to come.
-   Love you very much and I hope you like this sight - Brooke`}
+   Love you very much and I hope you like this sight - Brooke`,
+  },
 ];
 const Love: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <Gallery
-      images={images}
-      currentIndex={currentIndex}
-      setCurrentIndex={setCurrentIndex}
-    />
+    <>
+      <Head>
+        <title>We Love you!</title>
+        <meta name="description" content="Happy Birthday Friend!" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Gallery
+        images={images}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
+    </>
   );
 };
 
