@@ -32,6 +32,17 @@ const images = [
   { imageUrl: "/housemates.png"},
   { imageUrl: "/fam.png", text: "From Mom" },
   { imageUrl: "/MIB.png", vertical: true },
+  { imageUrl: "/kitten-bittens.png", vertical: true},
+  { imageUrl: "/brothers.png", vertical: true},
+  { imageUrl: "/second-bros.png",
+    text: `
+    Keegan, you are genuinely an inspiration to me in practically every possible way.
+    When you’re around, good conversation and good food always follow.
+    You have the best opinions (obviously).
+    You’re one of my favorite human beings, and I miss you!
+    `
+}
+
 ];
 const Love: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
