@@ -31,6 +31,8 @@ const images = [
   },
   { imageUrl: "/housemates.png"},
   { imageUrl: "/fam.png", text: "From Mom" },
+  { imageUrl: "/you-cute.png", vertical: true},
+  { imageUrl: "/flower-boi.png", vertical: true},
   { imageUrl: "/MIB.png", vertical: true },
   { imageUrl: "/kitten-bittens.png", vertical: true},
   { imageUrl: "/brothers.png", vertical: true},
