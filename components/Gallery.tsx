@@ -77,8 +77,8 @@ const Gallery = ({ images, currentIndex, setCurrentIndex }: Props) => {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   const viewPhoto = (idx: number) => {
-    setOpenModal(true);
     setCurrentIndex(idx);
+    setOpenModal(true);
   };
 
   const renderImageContent = (image: ImageI, idx: number) => {
